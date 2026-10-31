@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d35">
+  <title>Linux Service &amp; Process Supervisor</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <a class="brand" href="#dashboard" aria-label="Project home">
+        <span class="brand-mark">🐧</span>
+        <span><strong>LSPS</strong><small>Project Console</small></span>
+      </a>
+      <div class="side-label">WORKSPACE</div>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-link active" data-page="dashboard"><span>▦</span> Dashboard</button>
+        <button class="nav-link" data-page="services"><span>◈</span> Services</button>
+        <button class="nav-link" data-page="logs"><span>≡</span> Logs &amp; Events</button>
+        <button class="nav-link" data-page="resources"><span>⌁</span> System Resources</button>
+        <button class="nav-link" data-page="configuration"><span>⚙</span> Configuration</button>
+        <button class="nav-link" data-page="architecture"><span>⌘</span> Architecture</button>
+        <button class="nav-link" data-page="about"><span>ⓘ</span> Team &amp; About</button>
+      </nav>
+      <div class="sidebar-bottom" id="sidebarBottom">
+        <div class="connection-dot" id="sidebarDot"></div>
+        <div><strong id="sidebarTitle">Connecting...</strong><small id="sidebarSubtitle">Checking C supervisor</small></div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="Toggle navigation">☰</button>
+        <div class="crumb"><span>Operating Systems</span><b>/</b><strong id="crumbCurrent">Dashboard</strong></div>
+        <div class="top-actions">
+          <span class="preview-pill" id="livePill"><i></i> CHECKING BACKEND</span>
+          <div class="avatar">TK</div>
+        </div>
+      </header>
+
+      <div class="content">
+        <div class="notice" id="connNotice"><span class="notice-icon" id="noticeIcon">i</span><div><strong id="noticeTitle">Connecting to C Supervisor...</strong><span id="noticeDesc">Establishing connection with the embedded HTTP server on port 8080.</span></div><button class="notice-close" id="dismissNotice" aria-label="Dismiss notice">×</button></div>
+
+        <!-- ==================== DASHBOARD PAGE ==================== -->
+        <section class="page active" id="page-dashboard">
+          <div class="page-heading">
+            <div><div class="eyebrow">PROJECT CONSOLE</div><h1>Linux Service &amp; Process Supervisor</h1><p>Live process monitoring, signal dispatching, and automated recovery telemetry.</p></div>
+            <span class="status-chip neutral" id="dashStatusChip"><i></i> Awaiting backend</span>
+          </div>
+
+          <div class="dashboard-actions-bar">
+            <button class="primary-btn" id="dashBtnStartAll">▶ Start All</button>
+            <button class="secondary-btn" id="dashBtnStopAll" style="border-color:#fca5a5;color:#dc2626;">⏹ Stop All</button>
+            <button class="secondary-btn" id="dashBtnStartWaiting">✔ Start Ready Waiting (y)</button>
+            <button class="secondary-btn" id="dashBtnReload">⟳ Reload Config</button>
+            <button class="secondary-btn" id="dashBtnShutdown" title="Shutdown C supervisor backend process" style="font-size:11px;opacity:0.75;">✕ Shutdown Backend</button>
+          </div>
+
+          <div class="hero-card">
+            <div class="hero-copy">
+              <span class="hero-tag">C11 · POSIX · LINUX</span>
+              <h2>Process supervision, live and connected.</h2>
+              <p>Directly connected to the embedded C HTTP server. Real-time process states, signal handling (SIGTERM, SIGSTOP, SIGCONT, SIGKILL), heartbeat pipes, and auto-restart backoff policies.</p>
+              <button class="primary-btn" data-go="services">Manage Services <span>→</span></button>
+            </div>
+            <div class="hero-graphic" aria-hidden="true">
+              <div class="orb orb-one"></div>
+              <div class="orb orb-two"></div>
+              <div class="terminal-card">
+                <div class="terminal-top"><i></i><i></i><i></i><span>supervisor.c</span></div>
+                <div class="code-lines">
+                  <b>01</b> <span>fork()</span> &amp; <span>execvp()</span><br>
+                  <b>02</b> <span>waitpid()</span> non-blocking<br>
+                  <b>03</b> <em>heartbeat via pipe(3)</em><br>
+                  <b>04</b> <strong>select() event loop</strong>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-title">
+            <div><h2>Live Project Status</h2><p>Real-time metrics polled from the C supervisor memory and /proc.</p></div>
+            <span class="small-muted" id="lastPollTime">POLLING ACTIVE</span>
+          </div>
+
+          <div class="stats-grid">
+            <article class="stat-card">
+              <div class="stat-icon blue">◈</div>
+              <div class="stat-label">Managed services</div>
+              <div class="stat-value" id="statManaged">—</div>
+              <div class="stat-foot" id="statManagedFoot">Registered in config</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon green">✓</div>
+              <div class="stat-label">Running services</div>
+              <div class="stat-value" id="statRunning">—</div>
+              <div class="stat-foot" id="statRunningFoot">Active child processes</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon amber">↻</div>
+              <div class="stat-label">Total restarts / crashes</div>
+              <div class="stat-value" id="statRestarts">—</div>
+              <div class="stat-foot" id="statRestartsFoot">Recovery backoff active</div>
+            </article>
+            <article class="stat-card">
+              <div class="stat-icon purple">⌁</div>
+              <div class="stat-label">Supervisor / Child RSS</div>
+              <div class="stat-value" id="statResources" style="font-size: 20px;">—</div>
+              <div class="stat-foot" id="statResourcesFoot">Kernel getrusage()</div>
+            </article>
+          </div>
+
+          <div class="dashboard-grid">
+            <article class="panel services-panel">
+              <div class="panel-head">
+                <div><h2>Service Overview</h2><p>Live state and process control</p></div>
+                <button class="text-btn" data-go="services">View all services →</button>
+              </div>
+              <div id="dashServicesContainer">
+                <div class="empty-state"><div class="empty-icon">◈</div><strong>Loading services...</strong><span>Connecting to the C supervisor...</span></div>
+              </div>
+            </article>
+            <article class="panel">
+              <div class="panel-head">
+                <div><h2>Latest Events</h2><p>Live stream from supervisor.log</p></div>
+                <button class="text-btn" data-go="logs">View full log →</button>
+              </div>
+              <div id="dashEventsContainer">
+                <div class="empty-state compact"><div class="empty-icon">≡</div><strong>Loading events...</strong><span>Fetching log stream...</span></div>
+              </div>
+            </article>
+          </div>
+
+          <div class="bottom-grid">
+            <article class="panel">
+              <div class="panel-head"><div><h2>Project Modules</h2><p>Source architecture implementation</p></div></div>
+              <div class="module-list">
+                <button data-go="configuration"><span class="module-symbol blue">⚙</span><span><strong>Configuration &amp; Startup</strong><small>config.c: parse services.conf and dependencies</small></span><span class="module-arrow">↗</span></button>
+                <button data-go="services"><span class="module-symbol green">◈</span><span><strong>Process Management &amp; Signals</strong><small>process.c &amp; signals.c: fork/exec, waitpid, killpg</small></span><span class="module-arrow">↗</span></button>
+                <button data-go="logs"><span class="module-symbol amber">≡</span><span><strong>Audit Logging &amp; IPC Heartbeats</strong><small>logger.c &amp; http_server.c: unbuffered log, pipes, REST</small></span><span class="module-arrow">↗</span></button>
+              </div>
+            </article>
+            <article class="panel next-panel">
+              <div class="next-icon">⌘</div>
+              <div>
+                <h2>Live Embedded C Server</h2>
+                <p>The web console is communicating with <code>bin/supervisor</code> via the embedded non-blocking HTTP server listening on port 8080.</p>
+                <button class="secondary-btn" data-go="architecture">Inspect Architecture →</button>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- ==================== SERVICES PAGE ==================== -->
+        <section class="page" id="page-services">
+          <div class="page-heading">
+            <div><div class="eyebrow">PROCESS CONTROL</div><h1>Managed Services</h1><p>Interactive process control: launch, terminate, suspend, and force-kill child processes.</p></div>
+            <span class="status-chip neutral" id="servicesStatusChip"><i></i> Not connected</span>
+          </div>
+
+          <div class="services-toolbar">
+            <input class="search-input" id="serviceSearch" type="search" placeholder="Search services…" aria-label="Search services">
+            <div class="toolbar-btns">
+              <button class="primary-btn" id="srvBtnStartAll">▶ Start All</button>
+              <button class="secondary-btn" id="srvBtnStopAll" style="border-color:#fca5a5;color:#dc2626;">⏹ Stop All</button>
+              <button class="secondary-btn" id="srvBtnRandomRestart">🎲 Random Restart</button>
+              <button class="secondary-btn" id="srvBtnChaosMode">⚡ Auto-Chaos: OFF</button>
+              <button class="secondary-btn" id="srvBtnStartWaiting">✔ Start Ready Waiting (y)</button>
+              <button class="secondary-btn" id="srvBtnReload">⟳ Reload Config</button>
+            </div>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div><h2>Process Table</h2><p>Kernel process states, PIDs, memory, and signal actions</p></div>
+              <span class="count-pill" id="servicesCountPill">0 records</span>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Service</th>
+                    <th>PID</th>
+                    <th>PGID</th>
+                    <th>Status</th>
+                    <th>Restarts / Crashes</th>
+                    <th>Memory</th>
+                    <th>Heartbeat Pulse</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="servicesTableBody">
+                  <tr>
+                    <td colspan="8">
+                      <div class="table-empty"><span>◈</span><strong>Loading process records...</strong><small>Connecting to supervisor backend...</small></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div><h2>IPC Anonymous Pipe Heartbeat Telemetry</h2><p>Child processes inherit pipe fd 3 (SUPERVISOR_HB_FD) and transmit periodic pulses</p></div>
+              <span class="status-chip online" id="hbMonitorChip"><i></i> Watchdog Active</span>
+            </div>
+            <p style="font-size: 13px; color: #475569; margin-bottom: 12px;">
+              Every worker configured with <code>heartbeat_timeout</code> writes <code>'H'</code> to pipe fd 3 every 2 seconds. The supervisor event loop reads from the pipe non-blockingly via <code>select()</code>. If a worker hangs or fails to beat within its timeout window, the supervisor watchdog flags it as <code>UNHEALTHY</code> and triggers automated recovery.
+            </p>
+            <div class="hb-summary-grid" id="hbSummaryGrid">
+              <!-- Dynamically populated cards for each service -->
+            </div>
+          </article>
+
+          <div class="callout">
+            <strong>Process signals enabled:</strong>
+            <p>Clicking <strong>Stop</strong> sends <code>SIGTERM</code> to the child's process group. <strong>Kill</strong> sends <code>SIGKILL</code>. <strong>Pause</strong> suspends execution via <code>SIGSTOP</code>, and <strong>Resume</strong> wakes it up via <code>SIGCONT</code>. Failed services automatically restart according to the backoff schedule.</p>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head"><div><h2>Core Operating System Concepts Applied</h2><p>Demonstrated in this project</p></div></div>
+            <div class="concept-grid">
+              <div><code>fork() + execvp()</code><p>Creates an isolated address space and executes the binary.</p></div>
+              <div><code>setsid() + killpg()</code><p>Assigns a new process group to cleanly terminate child process subtrees.</p></div>
+              <div><code>waitpid(WNOHANG)</code><p>Non-blocking asynchronous reaping to prevent zombie processes.</p></div>
+              <div><code>pipe() Heartbeats</code><p>Anonymous IPC channel monitored by select() for watchdog timeouts.</p></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ==================== LOGS PAGE ==================== -->
+        <section class="page" id="page-logs">
+          <div class="page-heading">
+            <div><div class="eyebrow">EVENT VISIBILITY</div><h1>Logs &amp; Events</h1><p>Real-time stream of the supervisor audit trail and individual service outputs.</p></div>
+            <span class="status-chip neutral" id="logsStatusChip"><i></i> No source connected</span>
+          </div>
+
+          <div class="logs-toolbar-wrap">
+            <select class="select-input" id="logSourceSelect" aria-label="Select log source">
+              <option value="">Supervisor Audit Log (logs/supervisor.log)</option>
+              <option value="heartbeat">heartbeat service (logs/heartbeat.out)</option>
+              <option value="logger">logger service (logs/logger.out)</option>
+              <option value="metrics">metrics service (logs/metrics.out)</option>
+              <option value="audit">audit service (logs/audit.out)</option>
+              <option value="flaky">flaky service (logs/flaky.out)</option>
+              <option value="hung">hung service (logs/hung.out)</option>
+            </select>
+            <input class="search-input" id="logSearch" type="search" placeholder="Filter log lines…" aria-label="Filter logs">
+            <button class="secondary-btn btn-sm" id="btnPauseLogs">⏸ Pause</button>
+            <button class="secondary-btn btn-sm" id="btnClearLogs">Clear View</button>
+            <button class="secondary-btn btn-sm" id="btnRefreshLogs">↻ Refresh</button>
+          </div>
+
+          <article class="panel" style="padding: 0; overflow: hidden;">
+            <div class="log-placeholder">
+              <div class="log-toolbar">
+                <span><i></i><i></i><i></i></span>
+                <span id="logActivePath">logs/supervisor.log</span>
+                <span id="logLineCountPill">0 lines</span>
+              </div>
+              <div class="log-terminal-output" id="logTerminal">Loading log stream...</div>
+            </div>
+          </article>
+
+          <article class="panel" style="margin-top: 16px;">
+            <div class="panel-head"><div><h2>Captured Supervisor Events</h2><p>Logged using direct unbuffered POSIX write() calls</p></div></div>
+            <div class="event-types">
+              <span>Supervisor Startup</span>
+              <span>fork+exec Launch</span>
+              <span>waitpid Exit Code</span>
+              <span>SIGTERM / SIGKILL Stop</span>
+              <span>Heartbeat Timeout</span>
+              <span>Backoff Auto-Restart</span>
+              <span>getrusage Resource Metric</span>
+            </div>
+          </article>
+        </section>
+
+        <!-- ==================== RESOURCES PAGE ==================== -->
+        <section class="page" id="page-resources">
+          <div class="page-heading">
+            <div><div class="eyebrow">SYSTEM TELEMETRY</div><h1>System Resources</h1><p>Resource accounting collected via getrusage(RUSAGE_CHILDREN) and Linux /proc.</p></div>
+            <span class="status-chip neutral" id="resStatusChip"><i></i> Live Telemetry</span>
+          </div>
+
+          <div class="resource-grid">
+            <article class="panel resource-card">
+              <div class="panel-head"><div><h2>CPU Time Consumed</h2><p>Kernel user and system CPU</p></div><span class="stat-icon blue">⌁</span></div>
+              <div class="metric-empty" id="resCpuVal" style="font-size: 32px; margin: 15px 0;">—</div>
+              <div class="skeleton-line" style="background: linear-gradient(90deg, #3b78f0 40%, #e2e8f0 40%);"></div>
+              <p class="muted" id="resCpuSub">Supervisor self + children time</p>
+            </article>
+
+            <article class="panel resource-card">
+              <div class="panel-head"><div><h2>Memory Allocation (RSS)</h2><p>Resident set size from /proc and rusage</p></div><span class="stat-icon green">▤</span></div>
+              <div class="metric-empty" id="resMemVal" style="font-size: 32px; margin: 15px 0;">—</div>
+              <div class="skeleton-line" style="background: linear-gradient(90deg, #19976b 35%, #e2e8f0 35%);"></div>
+              <p class="muted" id="resMemSub">Children maxrss + supervisor memory</p>
+            </article>
+          </div>
+
+          <article class="panel" style="margin-bottom: 16px;">
+            <div class="panel-head"><div><h2>System Load Average</h2><p>Linux kernel 1-min, 5-min, 15-min load</p></div><span class="count-pill" id="resLoadPill">getloadavg()</span></div>
+            <div style="font: 700 22px 'Space Grotesk', sans-serif; color: #1e293b;" id="resLoadText">—</div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head"><div><h2>Per-Process Memory Breakdown</h2><p>Live measurements read from /proc/&lt;pid&gt;/status</p></div></div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Service Name</th>
+                    <th>PID</th>
+                    <th>State</th>
+                    <th>Resident Memory (VmRSS)</th>
+                    <th>Uptime</th>
+                  </tr>
+                </thead>
+                <tbody id="resProcTableBody">
+                  <tr><td colspan="5"><div class="table-empty"><span>⌁</span><strong>Loading telemetry...</strong></div></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+        </section>
+
+        <!-- ==================== CONFIGURATION PAGE ==================== -->
+        <section class="page" id="page-configuration">
+          <div class="page-heading">
+            <div><div class="eyebrow">SERVICE DEFINITIONS</div><h1>Configuration</h1><p>Declarative service definitions in <code>config/services.conf</code>.</p></div>
+            <span class="status-chip neutral" id="cfgStatusChip"><i></i> Loading</span>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div><h2>services.conf Editor</h2><p>Edit service policies and reload live via SIGHUP</p></div>
+              <span class="file-pill" id="cfgPathPill">config/services.conf</span>
+            </div>
+            <div class="config-editor-wrap">
+              <textarea class="config-textarea" id="configEditor" spellcheck="false" placeholder="Loading configuration..."></textarea>
+              <div class="config-actions">
+                <button class="primary-btn" id="btnSaveConfig">💾 Save &amp; Reload (SIGHUP)</button>
+                <button class="secondary-btn" id="btnResetConfig">↺ Revert Changes</button>
+                <span class="config-msg" id="configMsg"></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="panel" style="margin-top: 16px;">
+            <div class="panel-head"><div><h2>Parsed Config Directives</h2><p>Supported configuration keys</p></div></div>
+            <div class="check-list">
+              <div><span>01</span><p><strong>command &amp; workdir</strong><small>Executable target, arguments and working directory.</small></p></div>
+              <div><span>02</span><p><strong>depends_on &amp; start_secs</strong><small>Dependency ordering and stability threshold.</small></p></div>
+              <div><span>03</span><p><strong>autorestart &amp; backoff</strong><small>Automatic recovery with exponential delay.</small></p></div>
+              <div><span>04</span><p><strong>heartbeat &amp; timeout</strong><small>Watchdog timer monitoring IPC pipe.</small></p></div>
+              <div><span>05</span><p><strong>stop_timeout</strong><small>Grace period before escalating SIGTERM to SIGKILL.</small></p></div>
+              <div><span>06</span><p><strong>nice</strong><small>Process scheduling priority (-20 to 19).</small></p></div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ==================== ARCHITECTURE PAGE ==================== -->
+        <section class="page" id="page-architecture">
+          <div class="page-heading">
+            <div><div class="eyebrow">SYSTEM DESIGN</div><h1>Architecture &amp; Integration</h1><p>Full connection model between the web console and the C process supervisor.</p></div>
+            <span class="status-chip online" id="archStatusChip"><i></i> Integrated &amp; Connected</span>
+          </div>
+
+          <div class="architecture-flow">
+            <div class="arch-node frontend">
+              <span>01</span>
+              <div class="arch-icon">▦</div>
+              <strong>Web Frontend</strong>
+              <small>HTML / CSS / JS Dashboard</small>
+              <span class="arch-live-badge active" id="archFrontendStatus">ACTIVE BROWSER</span>
+            </div>
+            <div class="arch-arrow">↕<small>HTTP / JSON</small></div>
+            <div class="arch-node backend">
+              <span>02</span>
+              <div class="arch-icon">⇄</div>
+              <strong>Embedded C HTTP Server</strong>
+              <small>Non-blocking select() on port 8080</small>
+              <span class="arch-live-badge active" id="archBackendStatus">0.0.0.0:8080</span>
+            </div>
+            <div class="arch-arrow">↕<small>In-Memory / IPC</small></div>
+            <div class="arch-node supervisor">
+              <span>03</span>
+              <div class="arch-icon">⌘</div>
+              <strong>C Supervisor Core</strong>
+              <small>fork, execvp, waitpid, signals, pipes</small>
+              <span class="arch-live-badge active" id="archSupervisorStatus">PID: RUNNING</span>
+            </div>
+          </div>
+
+          <article class="panel" style="margin-top: 20px;">
+            <div class="panel-head"><div><h2>Execution &amp; Telemetry Pipeline</h2><p>How requests flow from your click to the Linux kernel</p></div></div>
+            <div class="timeline">
+              <div>
+                <span>1</span>
+                <section>
+                  <strong>User Action in Browser</strong>
+                  <p>User clicks "Restart" on a service. The browser issues a POST to <code>/api/action</code> with <code>{"action":"restart", "service":"flaky"}</code>.</p>
+                </section>
+                <em>Frontend</em>
+              </div>
+              <div>
+                <span>2</span>
+                <section>
+                  <strong>Embedded C HTTP Server Processing</strong>
+                  <p>The C supervisor's <code>select()</code> loop unblocks on the listening socket, reads the request, parses the JSON payload, and calls <code>restart_service()</code>.</p>
+                </section>
+                <em>C Engine</em>
+              </div>
+              <div>
+                <span>3</span>
+                <section>
+                  <strong>POSIX Process Control &amp; Signal Dispatch</strong>
+                  <p>The C supervisor invokes <code>stop_service()</code> (sending <code>SIGTERM</code> to the child PGID), reaps it via <code>waitpid()</code>, and immediately calls <code>fork()</code> and <code>execvp()</code> to relaunch.</p>
+                </section>
+                <em>Linux Kernel</em>
+              </div>
+              <div>
+                <span>4</span>
+                <section>
+                  <strong>Live Telemetry &amp; Log Output</strong>
+                  <p>All events are appended to <code>logs/supervisor.log</code> using unbuffered <code>write()</code>. The UI polls <code>/api/status</code> and updates the table and logs instantly.</p>
+                </section>
+                <em>Observability</em>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- ==================== ABOUT PAGE ==================== -->
+        <section class="page" id="page-about">
+          <div class="page-heading">
+            <div><div class="eyebrow">PROJECT INFORMATION</div><h1>Team &amp; About</h1><p>Linux Service and Process Supervisor · Operating Systems project.</p></div>
+            <span class="team-pill">TASK KILLERS</span>
+          </div>
+
+          <div class="about-hero">
+            <div class="about-mark">🐧</div>
+            <div>
+              <h2>Linux Service &amp; Process Supervisor</h2>
+              <p>An enterprise-inspired POSIX process manager written in C11, featuring automatic failure recovery, dependency management, heartbeat watchdog, low-level audit logging, and a live web management console.</p>
+              <div class="tech-tags"><span>C11 / POSIX</span><span>Linux Kernel</span><span>fork / execvp</span><span>waitpid</span><span>signals</span><span>IPC pipes</span><span>HTML5</span><span>CSS3</span><span>JavaScript</span></div>
+            </div>
+          </div>
+
+          <div class="team-grid">
+            <article class="panel member-card">
+              <div class="member-top"><div class="member-avatar blue">SK</div><span class="role-tag">SERVICE MANAGEMENT</span></div>
+              <h2>Sai Kiran</h2>
+              <p class="roll">Roll No. 2520030125</p>
+              <p>Service management and initialization engine: configuration parsing (<code>config.c</code>), process creation with <code>fork()</code>, replacement with <code>execvp()</code>, PID tracking, and stdout/stderr redirection.</p>
+              <div class="member-topics"><span>Initialization</span><span>Process Launch</span><span>PID Tracking</span></div>
+            </article>
+
+            <article class="panel member-card">
+              <div class="member-top"><div class="member-avatar green">H</div><span class="role-tag">MONITORING &amp; RECOVERY</span></div>
+              <h2>Harshith</h2>
+              <p class="roll">Roll No. 2520030393</p>
+              <p>Process monitoring and fault recovery: non-blocking <code>waitpid(WNOHANG)</code> polling, <code>sigaction()</code> signal interception, process group signaling, heartbeat timeout detection, and exponential backoff restart policy.</p>
+              <div class="member-topics"><span>waitpid()</span><span>Signals (SIGTERM/KILL)</span><span>Auto-Recovery</span></div>
+            </article>
+
+            <article class="panel member-card">
+              <div class="member-top"><div class="member-avatar amber">N</div><span class="role-tag">RESOURCES &amp; LOGGING</span></div>
+              <h2>Nishanth</h2>
+              <p class="roll">Roll No. 2520030323</p>
+              <p>Resource accounting and audit logging: <code>getrusage(RUSAGE_CHILDREN)</code>, unbuffered low-level POSIX file I/O (<code>open</code>, <code>write</code>, <code>close</code>), IPC heartbeat pipes, and documentation materials.</p>
+              <div class="member-topics"><span>getrusage()</span><span>Audit Logging</span><span>IPC Pipes</span></div>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-head"><div><h2>Key Operating System Topics for Viva</h2><p>Principles demonstrated during execution</p></div></div>
+            <div class="principle-grid">
+              <div><b>01</b><strong>Process Lifecycle</strong><p>State transitions between RUNNING, WAITING, PAUSED, STOPPED, FAILED, and UNHEALTHY driven by kernel status codes.</p></div>
+              <div><b>02</b><strong>Signal Mechanics</strong><p>Differences between catchable signals (SIGTERM, SIGINT, SIGHUP) and uncatchable forced termination (SIGKILL, SIGSTOP).</p></div>
+              <div><b>03</b><strong>Inter-Process Communication</strong><p>Anonymous pipes for unidirectional heartbeat pulses and non-blocking I/O multiplexing via select().</p></div>
+            </div>
+          </article>
+        </section>
+
+        <footer>
+          <span>Linux Service &amp; Process Supervisor</span>
+          <span>Operating Systems Project <b>·</b> Team: Task Killers</span>
+        </footer>
+      </div>
+    </main>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>

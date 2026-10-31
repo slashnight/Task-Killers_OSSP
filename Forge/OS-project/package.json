@@ -1,0 +1,25 @@
+{
+  "name": "os-project",
+  "version": "1.0.0",
+  "description": "Linux Service & Process Supervisor with embedded C HTTP server and web dashboard",
+  "main": "linux-supervisor-website/app.js",
+  "scripts": {
+    "dev": "node dev.js",
+    "start": "node dev.js",
+    "wsl:start": "wsl -d Ubuntu -- bash -c \"chmod +x run.sh && ./run.sh\"",
+    "build": "wsl -d Ubuntu -- make all",
+    "clean": "wsl -d Ubuntu -- make clean",
+    "test": "wsl -d Ubuntu -- python3 test_all.py",
+    "test_all.py": "wsl -d Ubuntu -- python3 test_all.py",
+    "test:cli": "wsl -d Ubuntu -- make test"
+  },
+  "keywords": [
+    "operating-systems",
+    "process-supervisor",
+    "c",
+    "wsl",
+    "dashboard"
+  ],
+  "author": "Task Killers",
+  "license": "ISC"
+}
