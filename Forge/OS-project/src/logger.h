@@ -1,7 +1,7 @@
 #ifndef LOGGER_H
 #define LOGGER_H
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 int logger_init(const char *path);
 void logger_close(void);

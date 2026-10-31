@@ -6,13 +6,21 @@
 #include <signal.h>
 #include <errno.h>
 #include <time.h>
+#ifndef _WIN32
 #include <sys/wait.h>
+#endif
 #include <sys/stat.h>
+#ifndef _WIN32
 #include <sys/file.h>
+#endif
+#ifndef _WIN32
 #include <sys/select.h>
+#endif
+#ifndef _WIN32
 #include <sys/resource.h>
+#endif
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 static void format_uptime(time_t start, char *buf, size_t n) {
     if (start == 0) {

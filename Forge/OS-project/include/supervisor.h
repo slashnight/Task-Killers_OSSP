@@ -2,7 +2,162 @@
 #define SUPERVISOR_H
 
 #include <signal.h>
+#ifndef _WIN32
 #include <sys/select.h>
+#else
+#include <winsock2.h>
+#include <ws2tcpip.h>
+#include <direct.h>
+#include <io.h>
+#include <process.h>
+#include <string.h>
+#include <time.h>
+
+#ifndef SIGHUP
+#define SIGHUP 1
+#endif
+#ifndef SIGKILL
+#define SIGKILL 9
+#endif
+#ifndef SIGPIPE
+#define SIGPIPE 13
+#endif
+#ifndef SIGCHLD
+#define SIGCHLD 17
+#endif
+#ifndef SIGCONT
+#define SIGCONT 18
+#endif
+#ifndef SIGSTOP
+#define SIGSTOP 19
+#endif
+
+#ifndef SA_RESTART
+#define SA_RESTART 0x10000000
+#endif
+#ifndef SA_NOCLDSTOP
+#define SA_NOCLDSTOP 1
+#endif
+
+#ifndef WNOHANG
+#define WNOHANG 1
+#endif
+#ifndef WUNTRACED
+#define WUNTRACED 2
+#endif
+#ifndef WCONTINUED
+#define WCONTINUED 8
+#endif
+#ifndef WIFEXITED
+#define WIFEXITED(s) (((s) & 0x7f) == 0)
+#endif
+#ifndef WEXITSTATUS
+#define WEXITSTATUS(s) (((s) >> 8) & 0xff)
+#endif
+#ifndef WIFSIGNALED
+#define WIFSIGNALED(s) (((s) & 0x7f) != 0 && ((s) & 0x7f) != 0x7f)
+#endif
+#ifndef WTERMSIG
+#define WTERMSIG(s) ((s) & 0x7f)
+#endif
+#ifndef WIFSTOPPED
+#define WIFSTOPPED(s) (((s) & 0xff) == 0x7f)
+#endif
+#ifndef WIFCONTINUED
+#define WIFCONTINUED(s) ((s) == 0xffff)
+#endif
+
+#ifndef F_GETFD
+#define F_GETFD 1
+#define F_SETFD 2
+#define F_GETFL 3
+#define F_SETFL 4
+#define FD_CLOEXEC 1
+#define O_NONBLOCK 0x0004
+#define O_CLOEXEC 0x80000
+#endif
+
+#ifndef LOCK_EX
+#define LOCK_EX 2
+#define LOCK_NB 4
+#define LOCK_UN 8
+#endif
+
+#ifndef PRIO_PROCESS
+#define PRIO_PROCESS 0
+#endif
+
+#ifndef RUSAGE_SELF
+#define RUSAGE_SELF 0
+#define RUSAGE_CHILDREN -1
+struct rusage {
+    struct timeval ru_utime;
+    struct timeval ru_stime;
+    long ru_maxrss;
+    long ru_minflt;
+    long ru_majflt;
+    long ru_nvcsw;
+    long ru_nivcsw;
+};
+#endif
+
+#ifndef _SC_NPROCESSORS_ONLN
+#define _SC_NPROCESSORS_ONLN 84
+#endif
+#ifndef _SC_OPEN_MAX
+#define _SC_OPEN_MAX 4
+#endif
+#ifndef SIGTTIN
+#define SIGTTIN 21
+#endif
+#ifndef SIGTTOU
+#define SIGTTOU 22
+#endif
+#ifdef MAX_PATH
+#undef MAX_PATH
+#endif
+#include <stdint.h>
+
+#ifndef STDIN_FILENO
+#define STDIN_FILENO 0
+#define STDOUT_FILENO 1
+#define STDERR_FILENO 2
+#endif
+
+typedef int sigset_t;
+struct sigaction {
+    void (*sa_handler)(int);
+    sigset_t sa_mask;
+    int sa_flags;
+};
+
+static inline int sigemptyset(sigset_t *s) { if (s) *s = 0; return 0; }
+static inline int sigaction(int sig, const struct sigaction *act, struct sigaction *oact) { (void)sig; (void)act; (void)oact; return 0; }
+static inline pid_t waitpid(pid_t pid, int *status, int options) { (void)pid; (void)status; (void)options; return -1; }
+static inline pid_t fork(void) { return -1; }
+static inline int pipe(int fds[2]) { (void)fds; return -1; }
+static inline pid_t setsid(void) { return 0; }
+static inline pid_t getppid(void) { return 0; }
+static inline int kill(pid_t pid, int sig) { (void)pid; (void)sig; return 0; }
+static inline int killpg(pid_t pgrp, int sig) { (void)pgrp; (void)sig; return 0; }
+static inline int fcntl(int fd, int cmd, ...) { (void)fd; (void)cmd; return 0; }
+static inline int flock(int fd, int op) { (void)fd; (void)op; return 0; }
+static inline int setpriority(int which, int who, int prio) { (void)which; (void)who; (void)prio; return 0; }
+static inline int getrusage(int who, struct rusage *u) { if (u) memset(u, 0, sizeof(*u)); (void)who; return 0; }
+static inline long sysconf(int name) { (void)name; return 1; }
+static inline const char *strsignal(int sig) { (void)sig; return "SIGNAL"; }
+static inline int setenv(const char *name, const char *value, int overwrite) { (void)overwrite; return _putenv_s(name, value); }
+static inline int getloadavg(double loadavg[], int nelem) { for (int i = 0; i < nelem; ++i) loadavg[i] = 0.0; return nelem; }
+#ifndef localtime_r
+static inline struct tm *localtime_r(const time_t *timep, struct tm *result) {
+    return localtime_s(result, timep) == 0 ? result : NULL;
+}
+#endif
+#ifndef strtok_r
+#define strtok_r strtok_s
+#endif
+#define mkdir(path, mode) _mkdir(path)
+#endif
 #include <sys/types.h>
 #include <time.h>
 

@@ -5,10 +5,12 @@
 #include <unistd.h>
 #include <signal.h>
 #include <errno.h>
+#ifndef _WIN32
 #include <sys/select.h>
+#endif
 #include <sys/stat.h>
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 supervisor_t g_supervisor;
 

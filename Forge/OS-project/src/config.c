@@ -4,7 +4,7 @@
 #include <ctype.h>
 #include <signal.h>
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 static void trim(char *s) {
     char *start = s;

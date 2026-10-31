@@ -15368,3 +15368,876 @@ execvp(./bin/hung_worker) failed: No such file or directory
 [hung] heartbeat 7 at 1793427636
 [hung] heartbeat 8 at 1793427638
 [hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=465 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431861
+[hung] heartbeat 2 at 1793431863
+[hung] heartbeat 3 at 1793431865
+[hung] heartbeat 4 at 1793431867
+[hung] heartbeat 5 at 1793431869
+[hung] heartbeat 6 at 1793431871
+[hung] heartbeat 7 at 1793431873
+[hung] heartbeat 8 at 1793431875
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=480 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431888
+[hung] heartbeat 2 at 1793431890
+[hung] heartbeat 3 at 1793431892
+[hung] heartbeat 4 at 1793431894
+[hung] heartbeat 5 at 1793431896
+[hung] heartbeat 6 at 1793431898
+[hung] heartbeat 7 at 1793431900
+[hung] heartbeat 8 at 1793431902
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=483 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431914
+[hung] heartbeat 2 at 1793431916
+[hung] heartbeat 3 at 1793431918
+[hung] heartbeat 4 at 1793431920
+[hung] heartbeat 5 at 1793431922
+[hung] heartbeat 6 at 1793431924
+[hung] heartbeat 7 at 1793431926
+[hung] heartbeat 8 at 1793431928
+[hung] heartbeat 9 at 1793431930
+[hung] heartbeat 10 at 1793431932
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=488 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431944
+[hung] heartbeat 2 at 1793431946
+[hung] heartbeat 3 at 1793431948
+[hung] heartbeat 4 at 1793431950
+[hung] heartbeat 5 at 1793431952
+[hung] heartbeat 6 at 1793431954
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=492 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431966
+[hung] heartbeat 2 at 1793431968
+[hung] heartbeat 3 at 1793431970
+[hung] heartbeat 4 at 1793431972
+[hung] heartbeat 5 at 1793431974
+[hung] heartbeat 6 at 1793431976
+[hung] heartbeat 7 at 1793431978
+[hung] heartbeat 8 at 1793431980
+[hung] heartbeat 9 at 1793431982
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=497 heartbeat_fd=3
+[hung] heartbeat 1 at 1793431994
+[hung] heartbeat 2 at 1793431996
+[hung] heartbeat 3 at 1793431998
+[hung] heartbeat 4 at 1793432000
+[hung] heartbeat 5 at 1793432002
+[hung] heartbeat 6 at 1793432004
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=500 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432016
+[hung] heartbeat 2 at 1793432018
+[hung] heartbeat 3 at 1793432020
+[hung] heartbeat 4 at 1793432022
+[hung] heartbeat 5 at 1793432024
+[hung] heartbeat 6 at 1793432026
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=504 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432038
+[hung] heartbeat 2 at 1793432040
+[hung] heartbeat 3 at 1793432042
+[hung] heartbeat 4 at 1793432044
+[hung] heartbeat 5 at 1793432046
+[hung] heartbeat 6 at 1793432048
+[hung] heartbeat 7 at 1793432050
+[hung] heartbeat 8 at 1793432052
+[hung] heartbeat 9 at 1793432054
+[hung] heartbeat 10 at 1793432056
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=509 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432068
+[hung] heartbeat 2 at 1793432070
+[hung] heartbeat 3 at 1793432072
+[hung] heartbeat 4 at 1793432074
+[hung] heartbeat 5 at 1793432076
+[hung] heartbeat 6 at 1793432078
+[hung] heartbeat 7 at 1793432080
+[hung] heartbeat 8 at 1793432082
+[hung] heartbeat 9 at 1793432084
+[hung] heartbeat 10 at 1793432086
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=523 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432098
+[hung] heartbeat 2 at 1793432100
+[hung] heartbeat 3 at 1793432102
+[hung] heartbeat 4 at 1793432104
+[hung] heartbeat 5 at 1793432106
+[hung] heartbeat 6 at 1793432108
+[hung] heartbeat 7 at 1793432110
+[hung] heartbeat 8 at 1793432112
+[hung] heartbeat 9 at 1793432114
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=544 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432126
+[hung] heartbeat 2 at 1793432128
+[hung] heartbeat 3 at 1793432130
+[hung] heartbeat 4 at 1793432132
+[hung] heartbeat 5 at 1793432134
+[hung] heartbeat 6 at 1793432136
+[hung] heartbeat 7 at 1793432138
+[hung] heartbeat 8 at 1793432140
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=597 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432152
+[hung] heartbeat 2 at 1793432154
+[hung] heartbeat 3 at 1793432156
+[hung] heartbeat 4 at 1793432158
+[hung] heartbeat 5 at 1793432160
+[hung] heartbeat 6 at 1793432162
+[hung] heartbeat 7 at 1793432164
+[hung] heartbeat 8 at 1793432166
+[hung] heartbeat 9 at 1793432168
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=615 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432180
+[hung] heartbeat 2 at 1793432182
+[hung] heartbeat 3 at 1793432184
+[hung] heartbeat 4 at 1793432186
+[hung] heartbeat 5 at 1793432188
+[hung] heartbeat 6 at 1793432190
+[hung] heartbeat 7 at 1793432192
+[hung] heartbeat 8 at 1793432194
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=658 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432206
+[hung] heartbeat 2 at 1793432208
+[hung] heartbeat 3 at 1793432210
+[hung] heartbeat 4 at 1793432212
+[hung] heartbeat 5 at 1793432214
+[hung] heartbeat 6 at 1793432216
+[hung] heartbeat 7 at 1793432218
+[hung] heartbeat 8 at 1793432220
+[hung] heartbeat 9 at 1793432222
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=662 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432234
+[hung] heartbeat 2 at 1793432236
+[hung] heartbeat 3 at 1793432238
+[hung] heartbeat 4 at 1793432240
+[hung] heartbeat 5 at 1793432242
+[hung] heartbeat 6 at 1793432244
+[hung] heartbeat 7 at 1793432246
+[hung] heartbeat 8 at 1793432248
+[hung] heartbeat 9 at 1793432250
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=667 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432262
+[hung] heartbeat 2 at 1793432264
+[hung] heartbeat 3 at 1793432266
+[hung] heartbeat 4 at 1793432268
+[hung] heartbeat 5 at 1793432270
+[hung] heartbeat 6 at 1793432272
+[hung] heartbeat 7 at 1793432274
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=670 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432287
+[hung] heartbeat 2 at 1793432289
+[hung] heartbeat 3 at 1793432291
+[hung] heartbeat 4 at 1793432293
+[hung] heartbeat 5 at 1793432295
+[hung] heartbeat 6 at 1793432297
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=676 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432309
+[hung] heartbeat 2 at 1793432311
+[hung] heartbeat 3 at 1793432313
+[hung] heartbeat 4 at 1793432315
+[hung] heartbeat 5 at 1793432317
+[hung] heartbeat 6 at 1793432319
+[hung] heartbeat 7 at 1793432321
+[hung] heartbeat 8 at 1793432323
+[hung] heartbeat 9 at 1793432325
+[hung] heartbeat 10 at 1793432327
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=680 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432339
+[hung] heartbeat 2 at 1793432341
+[hung] heartbeat 3 at 1793432343
+[hung] heartbeat 4 at 1793432345
+[hung] heartbeat 5 at 1793432347
+[hung] heartbeat 6 at 1793432349
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=683 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432361
+[hung] heartbeat 2 at 1793432363
+[hung] heartbeat 3 at 1793432365
+[hung] heartbeat 4 at 1793432367
+[hung] heartbeat 5 at 1793432369
+[hung] heartbeat 6 at 1793432371
+[hung] heartbeat 7 at 1793432373
+[hung] heartbeat 8 at 1793432375
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=698 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432387
+[hung] heartbeat 2 at 1793432389
+[hung] heartbeat 3 at 1793432391
+[hung] heartbeat 4 at 1793432393
+[hung] heartbeat 5 at 1793432395
+[hung] heartbeat 6 at 1793432397
+[hung] heartbeat 7 at 1793432399
+[hung] heartbeat 8 at 1793432401
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=702 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432413
+[hung] heartbeat 2 at 1793432415
+[hung] heartbeat 3 at 1793432417
+[hung] heartbeat 4 at 1793432419
+[hung] heartbeat 5 at 1793432421
+[hung] heartbeat 6 at 1793432423
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=706 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432435
+[hung] heartbeat 2 at 1793432437
+[hung] heartbeat 3 at 1793432439
+[hung] heartbeat 4 at 1793432441
+[hung] heartbeat 5 at 1793432443
+[hung] heartbeat 6 at 1793432445
+[hung] heartbeat 7 at 1793432447
+[hung] heartbeat 8 at 1793432449
+[hung] heartbeat 9 at 1793432451
+[hung] heartbeat 10 at 1793432453
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=713 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432465
+[hung] heartbeat 2 at 1793432467
+[hung] heartbeat 3 at 1793432469
+[hung] heartbeat 4 at 1793432471
+[hung] heartbeat 5 at 1793432473
+[hung] heartbeat 6 at 1793432475
+[hung] heartbeat 7 at 1793432477
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=717 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432489
+[hung] heartbeat 2 at 1793432491
+[hung] heartbeat 3 at 1793432493
+[hung] heartbeat 4 at 1793432495
+[hung] heartbeat 5 at 1793432497
+[hung] heartbeat 6 at 1793432499
+[hung] heartbeat 7 at 1793432501
+[hung] heartbeat 8 at 1793432503
+[hung] heartbeat 9 at 1793432505
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=721 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432517
+[hung] heartbeat 2 at 1793432519
+[hung] heartbeat 3 at 1793432521
+[hung] heartbeat 4 at 1793432523
+[hung] heartbeat 5 at 1793432525
+[hung] heartbeat 6 at 1793432527
+[hung] heartbeat 7 at 1793432529
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=729 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432541
+[hung] heartbeat 2 at 1793432543
+[hung] heartbeat 3 at 1793432545
+[hung] heartbeat 4 at 1793432547
+[hung] heartbeat 5 at 1793432549
+[hung] heartbeat 6 at 1793432551
+[hung] heartbeat 7 at 1793432553
+[hung] heartbeat 8 at 1793432555
+[hung] heartbeat 9 at 1793432557
+[hung] heartbeat 10 at 1793432559
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=732 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432571
+[hung] heartbeat 2 at 1793432573
+[hung] heartbeat 3 at 1793432575
+[hung] heartbeat 4 at 1793432577
+[hung] heartbeat 5 at 1793432579
+[hung] heartbeat 6 at 1793432581
+[hung] heartbeat 7 at 1793432583
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=737 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432595
+[hung] heartbeat 2 at 1793432597
+[hung] heartbeat 3 at 1793432599
+[hung] heartbeat 4 at 1793432601
+[hung] heartbeat 5 at 1793432603
+[hung] heartbeat 6 at 1793432605
+[hung] heartbeat 7 at 1793432607
+[hung] heartbeat 8 at 1793432609
+[hung] heartbeat 9 at 1793432611
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=741 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432623
+[hung] heartbeat 2 at 1793432625
+[hung] heartbeat 3 at 1793432627
+[hung] heartbeat 4 at 1793432629
+[hung] heartbeat 5 at 1793432631
+[hung] heartbeat 6 at 1793432633
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=744 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432645
+[hung] heartbeat 2 at 1793432647
+[hung] heartbeat 3 at 1793432649
+[hung] heartbeat 4 at 1793432651
+[hung] heartbeat 5 at 1793432653
+[hung] heartbeat 6 at 1793432655
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=749 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432667
+[hung] heartbeat 2 at 1793432669
+[hung] heartbeat 3 at 1793432671
+[hung] heartbeat 4 at 1793432673
+[hung] heartbeat 5 at 1793432675
+[hung] heartbeat 6 at 1793432677
+[hung] heartbeat 7 at 1793432679
+[hung] heartbeat 8 at 1793432681
+[hung] heartbeat 9 at 1793432683
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=753 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432695
+[hung] heartbeat 2 at 1793432697
+[hung] heartbeat 3 at 1793432699
+[hung] heartbeat 4 at 1793432701
+[hung] heartbeat 5 at 1793432703
+[hung] heartbeat 6 at 1793432705
+[hung] heartbeat 7 at 1793432707
+[hung] heartbeat 8 at 1793432709
+[hung] heartbeat 9 at 1793432711
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=767 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432723
+[hung] heartbeat 2 at 1793432725
+[hung] heartbeat 3 at 1793432727
+[hung] heartbeat 4 at 1793432729
+[hung] heartbeat 5 at 1793432731
+[hung] heartbeat 6 at 1793432733
+[hung] heartbeat 7 at 1793432735
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=782 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432747
+[hung] heartbeat 2 at 1793432749
+[hung] heartbeat 3 at 1793432751
+[hung] heartbeat 4 at 1793432753
+[hung] heartbeat 5 at 1793432755
+[hung] heartbeat 6 at 1793432757
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=799 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432769
+[hung] heartbeat 2 at 1793432771
+[hung] heartbeat 3 at 1793432773
+[hung] heartbeat 4 at 1793432775
+[hung] heartbeat 5 at 1793432777
+[hung] heartbeat 6 at 1793432779
+[hung] heartbeat 7 at 1793432781
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=811 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432793
+[hung] heartbeat 2 at 1793432795
+[hung] heartbeat 3 at 1793432797
+[hung] heartbeat 4 at 1793432799
+[hung] heartbeat 5 at 1793432801
+[hung] heartbeat 6 at 1793432803
+[hung] heartbeat 7 at 1793432805
+[hung] heartbeat 8 at 1793432807
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=816 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432819
+[hung] heartbeat 2 at 1793432821
+[hung] heartbeat 3 at 1793432823
+[hung] heartbeat 4 at 1793432825
+[hung] heartbeat 5 at 1793432827
+[hung] heartbeat 6 at 1793432829
+[hung] heartbeat 7 at 1793432831
+[hung] heartbeat 8 at 1793432833
+[hung] heartbeat 9 at 1793432835
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=820 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432847
+[hung] heartbeat 2 at 1793432849
+[hung] heartbeat 3 at 1793432851
+[hung] heartbeat 4 at 1793432853
+[hung] heartbeat 5 at 1793432855
+[hung] heartbeat 6 at 1793432857
+[hung] heartbeat 7 at 1793432859
+[hung] heartbeat 8 at 1793432861
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=832 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432873
+[hung] heartbeat 2 at 1793432875
+[hung] heartbeat 3 at 1793432877
+[hung] heartbeat 4 at 1793432879
+[hung] heartbeat 5 at 1793432881
+[hung] heartbeat 6 at 1793432883
+[hung] heartbeat 7 at 1793432885
+[hung] heartbeat 8 at 1793432887
+[hung] heartbeat 9 at 1793432889
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=849 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432895
+[hung] heartbeat 2 at 1793432897
+[hung] heartbeat 3 at 1793432899
+[hung] heartbeat 4 at 1793432901
+[hung] heartbeat 5 at 1793432903
+[hung] heartbeat 6 at 1793432905
+[hung] heartbeat 7 at 1793432907
+[hung] heartbeat 8 at 1793432909
+[hung] heartbeat 9 at 1793432911
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=867 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432923
+[hung] heartbeat 2 at 1793432925
+[hung] heartbeat 3 at 1793432927
+[hung] heartbeat 4 at 1793432929
+[hung] heartbeat 5 at 1793432931
+[hung] heartbeat 6 at 1793432933
+[hung] heartbeat 7 at 1793432935
+[hung] heartbeat 8 at 1793432937
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=885 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432949
+[hung] heartbeat 2 at 1793432951
+[hung] heartbeat 3 at 1793432953
+[hung] heartbeat 4 at 1793432955
+[hung] heartbeat 5 at 1793432957
+[hung] heartbeat 6 at 1793432959
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=898 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432971
+[hung] heartbeat 2 at 1793432973
+[hung] heartbeat 3 at 1793432975
+[hung] heartbeat 4 at 1793432977
+[hung] heartbeat 5 at 1793432979
+[hung] heartbeat 6 at 1793432981
+[hung] heartbeat 7 at 1793432983
+[hung] heartbeat 8 at 1793432985
+[hung] heartbeat 9 at 1793432987
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=914 heartbeat_fd=3
+[hung] heartbeat 1 at 1793432999
+[hung] heartbeat 2 at 1793433001
+[hung] heartbeat 3 at 1793433003
+[hung] heartbeat 4 at 1793433005
+[hung] heartbeat 5 at 1793433007
+[hung] heartbeat 6 at 1793433009
+[hung] heartbeat 7 at 1793433011
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=928 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433023
+[hung] heartbeat 2 at 1793433025
+[hung] heartbeat 3 at 1793433027
+[hung] heartbeat 4 at 1793433029
+[hung] heartbeat 5 at 1793433031
+[hung] heartbeat 6 at 1793433033
+[hung] heartbeat 7 at 1793433035
+[hung] heartbeat 8 at 1793433037
+[hung] heartbeat 9 at 1793433039
+[hung] heartbeat 10 at 1793433041
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=947 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433053
+[hung] heartbeat 2 at 1793433055
+[hung] heartbeat 3 at 1793433057
+[hung] heartbeat 4 at 1793433059
+[hung] heartbeat 5 at 1793433061
+[hung] heartbeat 6 at 1793433063
+[hung] heartbeat 7 at 1793433065
+[hung] heartbeat 8 at 1793433067
+[hung] heartbeat 9 at 1793433069
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=965 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433081
+[hung] heartbeat 2 at 1793433083
+[hung] heartbeat 3 at 1793433085
+[hung] heartbeat 4 at 1793433087
+[hung] heartbeat 5 at 1793433089
+[hung] heartbeat 6 at 1793433091
+[hung] heartbeat 7 at 1793433093
+[hung] heartbeat 8 at 1793433095
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=980 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433107
+[hung] heartbeat 2 at 1793433109
+[hung] heartbeat 3 at 1793433111
+[hung] heartbeat 4 at 1793433113
+[hung] heartbeat 5 at 1793433115
+[hung] heartbeat 6 at 1793433117
+[hung] heartbeat 7 at 1793433119
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=996 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433131
+[hung] heartbeat 2 at 1793433133
+[hung] heartbeat 3 at 1793433135
+[hung] heartbeat 4 at 1793433137
+[hung] heartbeat 5 at 1793433139
+[hung] heartbeat 6 at 1793433141
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1007 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433153
+[hung] heartbeat 2 at 1793433155
+[hung] heartbeat 3 at 1793433157
+[hung] heartbeat 4 at 1793433159
+[hung] heartbeat 5 at 1793433161
+[hung] heartbeat 6 at 1793433163
+[hung] heartbeat 7 at 1793433165
+[hung] heartbeat 8 at 1793433167
+[hung] heartbeat 9 at 1793433169
+[hung] heartbeat 10 at 1793433171
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1028 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433183
+[hung] heartbeat 2 at 1793433185
+[hung] heartbeat 3 at 1793433187
+[hung] heartbeat 4 at 1793433189
+[hung] heartbeat 5 at 1793433191
+[hung] heartbeat 6 at 1793433193
+[hung] heartbeat 7 at 1793433195
+[hung] heartbeat 8 at 1793433197
+[hung] heartbeat 9 at 1793433199
+[hung] heartbeat 10 at 1793433201
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1046 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433213
+[hung] heartbeat 2 at 1793433215
+[hung] heartbeat 3 at 1793433217
+[hung] heartbeat 4 at 1793433219
+[hung] heartbeat 5 at 1793433221
+[hung] heartbeat 6 at 1793433223
+[hung] heartbeat 7 at 1793433225
+[hung] heartbeat 8 at 1793433227
+[hung] heartbeat 9 at 1793433229
+[hung] heartbeat 10 at 1793433231
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1065 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433243
+[hung] heartbeat 2 at 1793433245
+[hung] heartbeat 3 at 1793433247
+[hung] heartbeat 4 at 1793433249
+[hung] heartbeat 5 at 1793433251
+[hung] heartbeat 6 at 1793433253
+[hung] heartbeat 7 at 1793433255
+[hung] heartbeat 8 at 1793433257
+[hung] heartbeat 9 at 1793433259
+[hung] heartbeat 10 at 1793433261
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1083 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433273
+[hung] heartbeat 2 at 1793433275
+[hung] heartbeat 3 at 1793433277
+[hung] heartbeat 4 at 1793433279
+[hung] heartbeat 5 at 1793433281
+[hung] heartbeat 6 at 1793433283
+[hung] heartbeat 7 at 1793433285
+[hung] heartbeat 8 at 1793433287
+[hung] heartbeat 9 at 1793433289
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=1101 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433301
+[hung] heartbeat 2 at 1793433303
+[hung] heartbeat 3 at 1793433305
+[hung] heartbeat 4 at 1793433307
+[hung] heartbeat 5 at 1793433309
+[hung] heartbeat 6 at 1793433311
+[hung] heartbeat 7 at 1793433313
+[hung] heartbeat 8 at 1793433315
+[hung] heartbeat 9 at 1793433317
+[hung] heartbeat 10 at 1793433319
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1122 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433331
+[hung] heartbeat 2 at 1793433333
+[hung] heartbeat 3 at 1793433335
+[hung] heartbeat 4 at 1793433337
+[hung] heartbeat 5 at 1793433339
+[hung] heartbeat 6 at 1793433341
+[hung] heartbeat 7 at 1793433343
+[hung] heartbeat 8 at 1793433345
+[hung] heartbeat 9 at 1793433347
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=1141 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433359
+[hung] heartbeat 2 at 1793433361
+[hung] heartbeat 3 at 1793433363
+[hung] heartbeat 4 at 1793433365
+[hung] heartbeat 5 at 1793433367
+[hung] heartbeat 6 at 1793433369
+[hung] heartbeat 7 at 1793433371
+[hung] heartbeat 8 at 1793433373
+[hung] heartbeat 9 at 1793433375
+[hung] heartbeat 10 at 1793433377
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1160 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433389
+[hung] heartbeat 2 at 1793433391
+[hung] heartbeat 3 at 1793433393
+[hung] heartbeat 4 at 1793433395
+[hung] heartbeat 5 at 1793433397
+[hung] heartbeat 6 at 1793433399
+[hung] heartbeat 7 at 1793433401
+[hung] heartbeat 8 at 1793433403
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1177 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433415
+[hung] heartbeat 2 at 1793433417
+[hung] heartbeat 3 at 1793433419
+[hung] heartbeat 4 at 1793433421
+[hung] heartbeat 5 at 1793433423
+[hung] heartbeat 6 at 1793433425
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1193 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433437
+[hung] heartbeat 2 at 1793433439
+[hung] heartbeat 3 at 1793433441
+[hung] heartbeat 4 at 1793433443
+[hung] heartbeat 5 at 1793433445
+[hung] heartbeat 6 at 1793433447
+[hung] heartbeat 7 at 1793433449
+[hung] heartbeat 8 at 1793433451
+[hung] heartbeat 9 at 1793433453
+[hung] heartbeat 10 at 1793433455
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1213 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433467
+[hung] heartbeat 2 at 1793433469
+[hung] heartbeat 3 at 1793433471
+[hung] heartbeat 4 at 1793433473
+[hung] heartbeat 5 at 1793433475
+[hung] heartbeat 6 at 1793433477
+[hung] heartbeat 7 at 1793433479
+[hung] heartbeat 8 at 1793433481
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1229 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433493
+[hung] heartbeat 2 at 1793433495
+[hung] heartbeat 3 at 1793433497
+[hung] heartbeat 4 at 1793433499
+[hung] heartbeat 5 at 1793433501
+[hung] heartbeat 6 at 1793433503
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1244 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433515
+[hung] heartbeat 2 at 1793433517
+[hung] heartbeat 3 at 1793433519
+[hung] heartbeat 4 at 1793433521
+[hung] heartbeat 5 at 1793433523
+[hung] heartbeat 6 at 1793433525
+[hung] heartbeat 7 at 1793433527
+[hung] heartbeat 8 at 1793433529
+[hung] heartbeat 9 at 1793433531
+[hung] heartbeat 10 at 1793433533
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1263 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433545
+[hung] heartbeat 2 at 1793433547
+[hung] heartbeat 3 at 1793433549
+[hung] heartbeat 4 at 1793433551
+[hung] heartbeat 5 at 1793433553
+[hung] heartbeat 6 at 1793433555
+[hung] heartbeat 7 at 1793433557
+[hung] heartbeat 8 at 1793433559
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1281 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433571
+[hung] heartbeat 2 at 1793433573
+[hung] heartbeat 3 at 1793433575
+[hung] heartbeat 4 at 1793433577
+[hung] heartbeat 5 at 1793433579
+[hung] heartbeat 6 at 1793433581
+[hung] heartbeat 7 at 1793433583
+[hung] heartbeat 8 at 1793433585
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1296 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433597
+[hung] heartbeat 2 at 1793433599
+[hung] heartbeat 3 at 1793433601
+[hung] heartbeat 4 at 1793433603
+[hung] heartbeat 5 at 1793433605
+[hung] heartbeat 6 at 1793433607
+[hung] heartbeat 7 at 1793433609
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1315 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433621
+[hung] heartbeat 2 at 1793433623
+[hung] heartbeat 3 at 1793433625
+[hung] heartbeat 4 at 1793433627
+[hung] heartbeat 5 at 1793433629
+[hung] heartbeat 6 at 1793433631
+[hung] heartbeat 7 at 1793433633
+[hung] heartbeat 8 at 1793433635
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1331 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433647
+[hung] heartbeat 2 at 1793433649
+[hung] heartbeat 3 at 1793433651
+[hung] heartbeat 4 at 1793433653
+[hung] heartbeat 5 at 1793433655
+[hung] heartbeat 6 at 1793433657
+[hung] heartbeat 7 at 1793433659
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1343 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433671
+[hung] heartbeat 2 at 1793433673
+[hung] heartbeat 3 at 1793433675
+[hung] heartbeat 4 at 1793433677
+[hung] heartbeat 5 at 1793433679
+[hung] heartbeat 6 at 1793433681
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1360 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433693
+[hung] heartbeat 2 at 1793433695
+[hung] heartbeat 3 at 1793433697
+[hung] heartbeat 4 at 1793433699
+[hung] heartbeat 5 at 1793433701
+[hung] heartbeat 6 at 1793433703
+[hung] heartbeat 7 at 1793433705
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1376 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433717
+[hung] heartbeat 2 at 1793433719
+[hung] heartbeat 3 at 1793433721
+[hung] heartbeat 4 at 1793433723
+[hung] heartbeat 5 at 1793433725
+[hung] heartbeat 6 at 1793433727
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1409 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433739
+[hung] heartbeat 2 at 1793433741
+[hung] heartbeat 3 at 1793433743
+[hung] heartbeat 4 at 1793433745
+[hung] heartbeat 5 at 1793433747
+[hung] heartbeat 6 at 1793433749
+[hung] heartbeat 7 at 1793433751
+[hung] heartbeat 8 at 1793433753
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1414 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433765
+[hung] heartbeat 2 at 1793433767
+[hung] heartbeat 3 at 1793433769
+[hung] heartbeat 4 at 1793433771
+[hung] heartbeat 5 at 1793433773
+[hung] heartbeat 6 at 1793433775
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1417 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433787
+[hung] heartbeat 2 at 1793433789
+[hung] heartbeat 3 at 1793433791
+[hung] heartbeat 4 at 1793433793
+[hung] heartbeat 5 at 1793433795
+[hung] heartbeat 6 at 1793433797
+[hung] heartbeat 7 at 1793433799
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1422 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433811
+[hung] heartbeat 2 at 1793433813
+[hung] heartbeat 3 at 1793433815
+[hung] heartbeat 4 at 1793433817
+[hung] heartbeat 5 at 1793433819
+[hung] heartbeat 6 at 1793433821
+[hung] simulating watchdog stall (stopping heartbeats) at beat 6
+[hung] worker started pid=1429 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433833
+[hung] heartbeat 2 at 1793433835
+[hung] heartbeat 3 at 1793433837
+[hung] heartbeat 4 at 1793433839
+[hung] heartbeat 5 at 1793433841
+[hung] heartbeat 6 at 1793433843
+[hung] heartbeat 7 at 1793433845
+[hung] heartbeat 8 at 1793433847
+[hung] heartbeat 9 at 1793433849
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=1448 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433861
+[hung] heartbeat 2 at 1793433863
+[hung] heartbeat 3 at 1793433865
+[hung] heartbeat 4 at 1793433867
+[hung] heartbeat 5 at 1793433869
+[hung] heartbeat 6 at 1793433871
+[hung] heartbeat 7 at 1793433873
+[hung] heartbeat 8 at 1793433875
+[hung] heartbeat 9 at 1793433877
+[hung] heartbeat 10 at 1793433879
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1467 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433891
+[hung] heartbeat 2 at 1793433893
+[hung] heartbeat 3 at 1793433895
+[hung] heartbeat 4 at 1793433897
+[hung] heartbeat 5 at 1793433899
+[hung] heartbeat 6 at 1793433901
+[hung] heartbeat 7 at 1793433903
+[hung] heartbeat 8 at 1793433905
+[hung] heartbeat 9 at 1793433907
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=1484 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433919
+[hung] heartbeat 2 at 1793433921
+[hung] heartbeat 3 at 1793433923
+[hung] heartbeat 4 at 1793433925
+[hung] heartbeat 5 at 1793433927
+[hung] heartbeat 6 at 1793433929
+[hung] heartbeat 7 at 1793433931
+[hung] heartbeat 8 at 1793433933
+[hung] heartbeat 9 at 1793433935
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9
+[hung] worker started pid=1513 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433944
+[hung] heartbeat 2 at 1793433946
+[hung] heartbeat 3 at 1793433948
+[hung] worker exiting cleanly
+[hung] worker started pid=1527 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433952
+[hung] heartbeat 2 at 1793433954
+[hung] heartbeat 3 at 1793433956
+[hung] heartbeat 4 at 1793433958
+[hung] heartbeat 5 at 1793433960
+[hung] heartbeat 6 at 1793433962
+[hung] heartbeat 7 at 1793433964
+[hung] heartbeat 8 at 1793433966
+[hung] heartbeat 9 at 1793433968
+[hung] heartbeat 10 at 1793433970
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1547 heartbeat_fd=3
+[hung] heartbeat 1 at 1793433982
+[hung] heartbeat 2 at 1793433984
+[hung] heartbeat 3 at 1793433986
+[hung] heartbeat 4 at 1793433988
+[hung] heartbeat 5 at 1793433990
+[hung] heartbeat 6 at 1793433992
+[hung] heartbeat 7 at 1793433994
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1563 heartbeat_fd=3
+[hung] heartbeat 1 at 1793434006
+[hung] heartbeat 2 at 1793434008
+[hung] heartbeat 3 at 1793434010
+[hung] heartbeat 4 at 1793434012
+[hung] heartbeat 5 at 1793434014
+[hung] heartbeat 6 at 1793434016
+[hung] heartbeat 7 at 1793434018
+[hung] heartbeat 8 at 1793434020
+[hung] heartbeat 9 at 1793434022
+[hung] heartbeat 10 at 1793434024
+[hung] simulating watchdog stall (stopping heartbeats) at beat 10
+[hung] worker started pid=1583 heartbeat_fd=3
+[hung] heartbeat 1 at 1793434036
+[hung] heartbeat 2 at 1793434038
+[hung] heartbeat 3 at 1793434040
+[hung] heartbeat 4 at 1793434042
+[hung] heartbeat 5 at 1793434044
+[hung] heartbeat 6 at 1793434046
+[hung] heartbeat 7 at 1793434048
+[hung] simulating watchdog stall (stopping heartbeats) at beat 7
+[hung] worker started pid=1600 heartbeat_fd=3
+[hung] heartbeat 1 at 1793434060
+[hung] heartbeat 2 at 1793434062
+[hung] heartbeat 3 at 1793434064
+[hung] heartbeat 4 at 1793434066
+[hung] heartbeat 5 at 1793434068
+[hung] heartbeat 6 at 1793434070
+[hung] heartbeat 7 at 1793434072
+[hung] heartbeat 8 at 1793434074
+[hung] simulating watchdog stall (stopping heartbeats) at beat 8
+[hung] worker started pid=1616 heartbeat_fd=3
+[hung] heartbeat 1 at 1793434086
+[hung] heartbeat 2 at 1793434088
+[hung] heartbeat 3 at 1793434090
+[hung] heartbeat 4 at 1793434092
+[hung] heartbeat 5 at 1793434094
+[hung] heartbeat 6 at 1793434096
+[hung] heartbeat 7 at 1793434098
+[hung] heartbeat 8 at 1793434100
+[hung] heartbeat 9 at 1793434102
+[hung] simulating watchdog stall (stopping heartbeats) at beat 9

@@ -1,7 +1,7 @@
 #include <signal.h>
 #include <string.h>
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 volatile sig_atomic_t g_child_exited = 0;
 volatile sig_atomic_t g_shutdown_requested = 0;

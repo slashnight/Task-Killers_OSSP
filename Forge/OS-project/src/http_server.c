@@ -6,13 +6,15 @@
 #include <errno.h>
 #include <time.h>
 #include <ctype.h>
+#ifndef _WIN32
 #include <sys/socket.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <sys/stat.h>
 #include <sys/resource.h>
+#endif
+#include <sys/stat.h>
 
-#include "supervisor.h"
+#include "../include/supervisor.h"
 
 #define MAX_HTTP_CLIENTS 16
 #define HTTP_REQ_BUF_SIZE 16384
@@ -706,7 +708,7 @@ int http_server_init(int port, const char *web_root) {
     }
 
     int opt = 1;
-    setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof(opt));
+    setsockopt(fd, SOL_SOCKET, SO_REUSEADDR, (const void *)&opt, sizeof(opt));
 
     int flags = fcntl(fd, F_GETFL, 0);
     if (flags >= 0) {
